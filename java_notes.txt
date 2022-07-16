@@ -1,0 +1,317 @@
+# NOTES #
+-----------------
+
+
+JAVA -> Developed by Sun microsystems in  1995 -> james gosling is known as father of java -> before java the name was "oak".
+
+javah -> to create header file like if we want to create a header file for function likne if the user says pattern function call kare to ene aakhi ek paatern mali jaay 
+
+
+
+Features : 
+- Simple =>  - Java syntax is based on C++ (so easier for programmers to learn it after C++).
+ 		- Java has removed many complicated and rarely-used features, for example, explicit pointers, operator overloading, etc.
+		- There is no need to remove unreferenced objects because there is an Automatic Garbage Collection in Java.
+
+- Object-Oriented
+		- Object -> Real world entity 
+		- Class  -> May or may not be and real world entity ,its a logical entity 
+		- Inheritance 
+		- Polymorphism
+		- Abstraction
+				- Abstraction is a process of hiding the implementation details and showing only functionality to the user.
+				- Another way, it shows only essential things to the user and hides the internal details, for example, sending SMS where you type the text and send the message. You don't know the 				   internal processing about the message delivery.
+		- Encapsulation
+				-Data hiding
+
+- Portable
+	- Java is portable because it facilitates you to carry the Java bytecode to any platform. It doesn't require any implementation. 
+	- Write once run 
+
+- Platform independent
+		- Java is platform independent because it is different from other languages like C, C++, etc. which are compiled into platform specific machines while Java is a write once, run anywhere language. 		  A platform is the hardware or software environment in which a program runs.
+		- Java provides a software-based platform.
+		-Java code is compiled by the compiler and converted into bytecode.
+		
+- Secured
+	Java is secured because:
+		- No explicit pointer
+		- Java Programs run inside a virtual machine
+
+- Robust
+	- It uses strong memory management.
+	- There is a lack of pointers that avoids security problems.
+	- Java provides automatic garbage collection which runs on the Java Virtual Machine to get rid of objects which are not being used by a Java application anymore.
+	- There are exception handling and the type checking mechanism in Java. All these points make Java robust.
+
+- Architecture neutral
+	-In C programming, int data type occupies 2 bytes of memory for 32-bit architecture and 4 bytes of memory for 64-bit architecture. However, it occupies 4 bytes of memory for both 32 and 64-bit 		architectures in Java.
+
+- Interpreted
+
+- High Performance 
+
+- Multithreaded
+
+- Distributed
+	 - This feature of Java makes us able to access files by calling the methods from any machine on the internet.
+
+- Dynamic
+
+----------------------------------------------------------------------------------------------
+JDK -> To Develop a java application or a prog  -> wee need JDK  (tools and  libraries )
+JRE -> It Provides the Run Time Environment to run the developed prog ,code or application 
+JVM -> In JRE is responsible for executing the code ,,, it reads the code line by line and execute them line by line (it is a interpreter )
+
+
+JDK = JRE + Development tools 
+JRE = JVM + Library Classes   
+
+----------------------------------------------------------------------------------------------
+
+OOP
+------
+
+=>  java has compiler and interpreter both 
+=> ".java" is the extension of java file the produce .class file 
+
+JIT will convert the file in byte code to run the file 
+
+
+OOP
+--- 
+
+* CLASS -> OBJET 
+* LOGIC -> PHYSICAL
+ 
+
+=>CLASS  awlays rep. a grp. // objet is a real world entity (ppt -> place person thing)          
+
+
+
+System.out.println("hi");
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+data type ? 
+
+1)primitive 
+	byte 				1byte		8bits		256/2  => -128  0 127
+	short 				2byte		16bits      -32768 0 32767
+	char 				2byte		16bits 
+	int 				4byte		32bits 
+	long 				8byte		64bits
+	float 				4byte		32bits
+	double 				8byte		64bits
+	boolean true false  ----		1bit 
+	
+2)non primitive 
+	class 
+	array
+	enum
+	.....
+
+----------------------------------------------------------------------------------------------------------------------------
+The main method  -> is used by JVM to start the execution of java code 
+
+static public void main(String[] args)
+public static void main(String... x)
+static public void main(String bang_a_gong[]) 
+
+are some example of main methods  
+
+
+------------------------------------------------------------------------------
+
+-> jo bhi first letter capital hoga wo java me class hai and thats a convention in java 
+
+-> ; is optional in java class 
+
+-> we have to make class public 
+
+-> the main method will be public static void main
+
+
+when compiling 
+===>> javac filename.java
+
+to run 
+===>> java classname
+
+java ~verbose 
+==>> backend pe jo logs hai wo dekhaiega
+
+
+
+we can write multiple classes in java but only one class will be public and that public class will be the name of our java file  
+and when we run we need to write the class name ,,,,,, also we cannot run all classes together
+
+it will let us complie even if there is no method but to run it we need the main method 
+so this will give us run time error only 
+
+we can write any file name to the file if no class is public but that will not run  also individual class can run if they are not having any error
+
+javac -d means destination
+javac -cp means class path 
+
+diff b/w scanner and buffer reader 
+
+-----------------------------------------------------------------------------------------------------------
+java is pure OOP 
+static -> no need to create the object of the class as statuc will do the work of creating the object for the main method 
+
+println -> method in the class printStream class but we cant make the object of pritstream
+
+in System class out  is the object of printStream  
+System ref to current comp. out ref to console thus System nu object na bane 
+
+-----------------------------------------------------------------------------------------------------------
+Scanner scr    =    new Scanner(System.in);
+//class  objname   keyword  constructor-> to initialize new memory  thats null and new  
+System -> class object -> in 
+
+why we need to import Scanner class => 
+there are so many classes in java (1 lakh+)
+so for separation with proper classification we need 
+
+String class is need by our main method 
+
+
+java => classes =>
+	lang -> system string (they load by default as they are implicitly imported in every class file ) => import java.lang.*; 
+	//lang is a package ......similarly others
+	io ->
+	sql
+	security
+	util
+	applet
+
+
+->if we write imort java.util.*; -> javaq will do smart work it will allow all class but it will not load the class in the memory 
+	until we use it
+	
+-> but developer convention is not like that ........write all import class explicitly 
+
+--------------------------------------------------------------------------------------------------
+
+static -> only one copy 
+
+int b [] [] = new int [x][y];
+for(int i =0 ;i<a.length;i++){
+	for(int j =0 ;j< b[i].length;j++){
+	
+	}
+}
+
+// row wise data jaay to row major  array 
+// column wise data jaay to col major array 
+
+
+there is a jaaged array that we will use to store different number of columns in different rows 
+
+
+
+object = null  // this will release the memory at that moment only when the gc will be called 
+obnject.close  => in this we declared explicitly that we dont need it and this will remove it from the memory 
+
+also we can only use it for the resource only ......which can be  
+
+---------------------------------------------------------------------------------------------------------------
+solid principles ->   if we want to use the private method we need to use getters and setters 		
+System.out.println(p1); // -> this will print hashcode and by default it will use toString() and will give the memory location in hexadecimal format 
+and will also print the class name 
+
+Object class is parent of all class 
+
+Array are treated as object in java 
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+if you want to modify specific variable we use setter 
+
+objects are made in heap  memory 
+
+by default the child will call the parent default if we create parameterized const of parent and if we have created default of child only then
+it will give error( compilation )
+
+by default super() is written by java compiler for implicit const 
+
+we can write it explicitly then we need to write super in the child's default 
+
+KISS -> Principle 
+Keep It Simple, Stupid 
+
+SOLID principle=>
+S->Single Responsibility Principle (SRP)
+O->Open-Closed Principle (OCP)
+L->Liskov Substitution Principle (LSP)
+I->Interface Segregation Principle (ISP)
+D->Dependency Inversion Principle (DIP)
+
+
+
+
+
+----------------------------
+array of object is null in java as it does not get initialized 
+so we need to call the constructor  for the same
+
+
+
+------------------------------------------------------------------------
+
+static variable are always at class level 
+
+array will go in heap-> 
+java has 5 memory management -> heap , stack 
+
+for array length is keyword -> so we use => a.length 
+overriding -> security , memory leak , feature enhancement , bug fix 
+
+we can change one thing in overriding that is access modifiers
+we can change one thing in overloading that is arguments  
+-> it not compulsory that overloading can happen in one class only  it can also happen that in different class we can create same methods
+one rule is there that there should be parent child relation for overriding 
+if we want to call the same overridden method of parent through child's object then we can use super on any line 
+but in constructor its compulsory to write it in 1st line .
+method can only call method but const can call constand method also 
+
+in inc order -> private , default , protected , public 
+
+
+Math class has all the methods static so no need to make the object 
+but in it the const is private . so we cannot create its object due to this 	
+
+------------------------------------------------------------------------
+static has only one memory and will have only one copy  also we can initialize it n times  and that will have no effect for diff things
+static variable ko hum class ke naam se access kar sakte hai 
+
+but for instance var.  the is n time copy per instance or object 
+
+-----------------
+
+static method has one property that only  static variables can be initialized in it 
+
+
+
+object counter -> create a static method and make a const and in that do counter++;
+
+------------------------------------------------------------------------
+
+abstraction 
+-> data hiding 
+
+abstract keyword only in class and methods 
+
+non abstract class ma abstart method na chale 
+abstract class ma logic na lakhaay 
+
+but when method is abstract then child also abstract 
+it is one form of overriding 
+
+also we cannot make a object for abstract class as the methods in it has no logic 
+
+ 
+
+
